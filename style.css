@@ -1,0 +1,168 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: #6D6F7F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  perspective: 1000px;
+}
+.main {
+  width: 320px;
+  height: 450px;
+  padding: 10px 0px;
+  background: #E5E6F1;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  border-radius: 10px;
+  gap: 5px 0px;
+  transition: all 0.5s;
+}
+.main .toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.toggle i{
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 3px;
+  padding-bottom: 5px;
+  transition: 0.3s;
+}
+.main form {
+  width: 100%;
+  height: 50px;
+  padding: 0px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+.main form input {
+  width: 100%;
+  padding: 8px 0px;
+  outline: none;
+  border: 1px solid black;
+  background: transparent;
+  border-radius: 5px;
+  font-size: 20px;
+  padding-left: 10px;
+  font-family: serif;
+  letter-spacing: 2px;
+  color: black;
+  transition: all 0.5s;
+}
+.main form input::placeholder{
+  color: black;
+  opacity: 0.4;
+  transition: all 0.5s;
+}
+.main ul {
+  width: 100%;
+  height: 100%;
+  padding: 0px 5px;
+  position: relative;
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 5px;
+}
+.main ul li {
+  margin-top: 5px;
+  background: #B4B4C1;
+  list-style: none;
+  border-radius: 5px;
+  transition: all 0.5s;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 170px;
+  background: #D9D9DF;
+  color: black;
+}
+.main ul li .pic {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pic .img {
+  height: 90px;
+}
+.data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100%/2);
+}
+.data .about {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: serif;
+  transition: all 0.2s;
+}
+.about :nth-child(1){
+  font-size: 0.9rem;
+  user-select: none;
+}
+.about :nth-child(2) del{
+  font-size: 0.7rem;
+  user-select: none;
+}
+.about :nth-child(3) {
+  font-size: 0.9rem;
+  user-select: none;
+} 
+.btn {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.btn button {
+  padding: 5px 10px;
+  font-weight: 700;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 3px;
+  background: #B2B6D9;
+  position: relative;
+  top: 20px;
+  right: 10px;
+  user-select: none;
+}
+.btn button:hover {
+  background: #737BD1;
+}
+
+
+body.dark .main{
+  background: black;
+  color: white;
+}
+body.dark ul li {
+  background: black;
+  color: white;
+  border: 1px solid rgba(255,255, 255, 0.20);
+}
+body.dark input {
+  border: 1px solid white;
+  color: white;
+  background: rgba(255, 255, 255, 0.10);
+}
+body.dark input::placeholder{
+  color: white;
+}
